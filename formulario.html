@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title> Figuras Geométricas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
+      padding: 20px;
+      color: #033047;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contenedor {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    input {
+      padding: 8px;
+    }
+    button {
+      background-color: #0288d1;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0277bd;
+    }
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1> Figuras Geométricas</h1>
+<div class="contenedor">
+  <form id="figuraForm">
+    <label for="figura">Selecciona una figura:</label>
+    <select name="figura" id="figura" required>
+      <option value="">-- Elige una opción --</option>
+      <option value="cuadrado">Cuadrado</option>
+      <option value="rectangulo">Rectángulo</option>
+      <option value="circulo">Círculo</option>
+      <option value="triangulo">Triángulo</option>
+      <option value="pentagono">Pentágono</option>
+      <option value="hexagono">Hexágono</option>
+      <option value="rombo">Rombo</option>
+      <option value="trapecio">Trapecio</option>
+    </select>
+
+    <div id="inputs"></div>
+
+    <button type="submit" id="calcularBtn" style="display:none;">Calcular</button>
+  </form>
+
+  <div class="resultado" id="resultado"></div>
+</div>
+
+<footer>
+ Andrea Carcamo Angeles .
+</footer>
+
+<script>
+  const figuraSelect = document.getElementById('figura');
+  const inputsDiv = document.getElementById('inputs');
+  const calcularBtn = document.getElementById('calcularBtn');
+  const resultadoDiv = document.getElementById('resultado');
+
+  figuraSelect.addEventListener('change', () => {
+    const figura = figuraSelect.value;
+    resultadoDiv.innerHTML = '';
+    inputsDiv.innerHTML = '';
+    calcularBtn.style.display = 'none';
+
+    if (!figura) return;
+
+    let html = '';
+    switch(figura) {
+      case 'cuadrado':
+      case 'triangulo':
+      case 'pentagono':
+      case 'hexagono':
+        html += '<label for="lado">Lado:</label>';
+        html += '<input type="number" id="lado" name="lado" step="any" required min="0.0001">';
+        break;
+      case 'rectangulo':
+        html += '<label for="base">Base:</label>';
+        html += '<input type="number" id="base" name="base" step="any" required min="0.0001">';
+        html += '<label for="altura">Altura:</label>';
+        html += '<input type="number" id="altura" name="altura" step="any" required min="0.0001">';
+        break;
+      case 'circulo':
+        html += '<label for="radio">Radio:</label>';
+        html += '<input type="number" id="radio" name="radio" step="any" required min="0.0001">';
+        break;
+      case 'rombo':
+        html += '<label for="dMayor">Diagonal mayor:</label>';
+        html += '<input type="number" id="dMayor" name="dMayor" step="any" required min="0.0001">';
+        html += '<label for="dMenor">Diagonal menor:</label>';
+        html += '<input type="number" id="dMenor" name="dMenor" step="any" required min="0.0001">';
+        break;
+      case 'trapecio':
+        html += '<label for="baseMayor">Base mayor:</label>';
+        html += '<input type="number" id="baseMayor" name="baseMayor" step="any" required min="0.0001">';
+        html += '<label for="baseMenor">Base menor:</label>';
+        html += '<input type="number" id="baseMenor" name="baseMenor" step="any" required min="0.0001">';
+        html += '<label for="altura">Altura:</label>';
+        html += '<input type="number" id="altura" name="altura" step="any" required min="0.0001">';
+        break;
+    }
+    inputsDiv.innerHTML = html;
+    calcularBtn.style.display = 'block';
+  });
+
+  document.getElementById('figuraForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    resultadoDiv.innerHTML = '';
+    const figura = figuraSelect.value;
+
+    let area = 0;
+    let perimetro = 0;
+
+    function showResult(text) {
+      resultadoDiv.innerHTML = text;
+    }
+
+    try {
+      switch(figura) {
+        case 'cuadrado': {
+          const lado = parseFloat(document.getElementById('lado').value);
+          area = lado * lado;
+          perimetro = 4 * lado;
+          break;
+        }
+        case 'rectangulo': {
+          const base = parseFloat(document.getElementById('base').value);
+          const altura = parseFloat(document.getElementById('altura').value);
+          if (base === altura) {
+            showResult("La base y la altura son iguales. Eso forma un cuadrado, no un rectángulo.");
+            return;
+          }
+          area = base * altura;
+          perimetro = 2 * (base + altura);
+          break;
+        }
+        case 'circulo': {
+          const radio = parseFloat(document.getElementById('radio').value);
+          area = Math.PI * Math.pow(radio, 2);
+          perimetro = 2 * Math.PI * radio;
+          break;
+        }
+        case 'triangulo': {
+          const lado = parseFloat(document.getElementById('lado').value);
+          area = (Math.sqrt(3) / 4) * Math.pow(lado, 2);
+          perimetro = 3 * lado;
+          break;
+        }
+        case 'pentagono': {
+          const lado = parseFloat(document.getElementById('lado').value);
+          const rad = 36 * Math.PI / 180;
+          const apotema = (lado / 2) / Math.tan(rad);
+          area = (5 * lado * apotema) / 2;
+          perimetro = 5 * lado;
+          break;
+        }
+        case 'hexagono': {
+          const lado = parseFloat(document.getElementById('lado').value);
+          const apotema = Math.sqrt(Math.pow(lado, 2) - Math.pow(lado / 2, 2));
+          area = (6 * lado * apotema) / 2;
+          perimetro = 6 * lado;
+          break;
+        }
+        case 'rombo': {
+          const dMayor = parseFloat(document.getElementById('dMayor').value);
+          const dMenor = parseFloat(document.getElementById('dMenor').value);
+          area = (dMayor * dMenor) / 2;
+          const lado = Math.sqrt(Math.pow(dMayor / 2, 2) + Math.pow(dMenor / 2, 2));
+          perimetro = 4 * lado;
+          break;
+        }
+        case 'trapecio': {
+          const baseMayor = parseFloat(document.getElementById('baseMayor').value);
+          const baseMenor = parseFloat(document.getElementById('baseMenor').value);
+          const altura = parseFloat(document.getElementById('altura').value);
+          area = ((baseMayor + baseMenor) * altura) / 2;
+          const ladoInclinado = Math.sqrt(Math.pow((baseMayor - baseMenor) / 2, 2) + Math.pow(altura, 2));
+          perimetro = baseMayor + baseMenor + 2 * ladoInclinado;
+          break;
+        }
+      }
+
+      showResult(`Área: ${area.toFixed(2)}<br>Perímetro: ${perimetro.toFixed(2)}`);
+
+    } catch (error) {
+      showResult('Error en los cálculos. Por favor, verifica los valores ingresados.');
+    }
+  });
+</script>
+
+</body>
+</html>

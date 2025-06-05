@@ -1,235 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cálculo de Área y Perímetro de Figuras Geométricas</title>
+  <meta charset="UTF-8">
+  <title>Figuras Geométricas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: white;
-      margin: 20px;
-      color: blue;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      font-family: 'Quicksand', sans-serif;
+      color: #033047;
     }
-    h1 {
-      text-align: center;
-      color: purple;
-    }
-    form {
-      max-width: 480px;
-      margin: 0 auto;
-      background: orange;
-      border-radius: 10px;
-      padding: 25px 30px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-      flex-grow: 1;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-    input[type="number"], select {
-      width: 100%;
-      padding: 8px 10px;
-      margin-top: 6px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-    .botones {
-      display: flex;
-      justify-content: center;
-      margin-top: 25px;
-    }
-    button {
-      background: green;
+
+    header {
+      background: linear-gradient(to right, #0288d1, #26c6da);
       color: white;
-      font-size: 1.1rem;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 7px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #1c5980;
-    }
-    .resultado {
-      max-width: 480px;
-      margin: 25px auto 0 auto;
-      background: #e1f0fb;
-      border-radius: 10px;
-      padding: 20px;
-      color: blue;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      max-width: 480px;
-      margin: 20px auto 10px auto;
+      padding: 40px 20px;
       text-align: center;
-      color: plum;
-      font-size: 0.9rem;
     }
-    img {
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .tarjeta {
+      background: white;
+      width: 240px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .tarjeta a {
+      text-decoration: none;
+      color: #0288d1;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .form-link {
       display: block;
-      margin: 10px auto;
-      width: 200px;
-      height: 200px;
+      text-align: center;
+      margin: 30px auto;
+      font-size: 18px;
+      color: #01579b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .form-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: linear-gradient(to right, #01579b, #0288d1);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 16px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-<h1>Cálculo de Área y Perímetro</h1>
 
-<form id="form-figuras">
-  <label for="figura">Selecciona una figura geométrica:</label>
-  <select id="figura" onchange="mostrarCamposFigura()" required>
-    <option value="" disabled selected>-- Selecciona la figura --</option>
-    <option value="cuadrado">Cuadrado</option>
-    <option value="rectangulo">Rectángulo</option>
-    <option value="circulo">Círculo</option>
-    <option value="triangulo">Triángulo</option>
-    <option value="pentagono">Pentágono</option>
-    <option value="hexagono">Hexágono</option>
-    <option value="rombo">Rombo</option>
-    <option value="trapecio">Trapecio</option>
-  </select>
+  <header>
+    <h1>Figuras Geométricas</h1>
+  </header>
 
-  <div id="campos"></div>
+  <section class="galeria">
+    <div class="tarjeta"><a href="cuadrado.html">Cuadrado</a></div>
+    <div class="tarjeta"><a href="rectangulo.html">Rectángulo</a></div>
+    <div class="tarjeta"><a href="circulo.html">Círculo</a></div>
+    <div class="tarjeta"><a href="triangulo.html">Triángulo Equilátero</a></div>
+    <div class="tarjeta"><a href="pentagono.html">Pentágono</a></div>
+    <div class="tarjeta"><a href="hexagono.html">Hexágono</a></div>
+    <div class="tarjeta"><a href="rombo.html">Rombo</a></div>
+    <div class="tarjeta"><a href="trapecio.html">Trapecio</a></div>
+   
+  </section>
 
-  <div class="botones">
-    <button type="submit">Calcular</button>
-  </div>
-</form>
+  <a class="form-link" href="formulario.html">Ir al Formulario</a>
 
-<div id="resultado" class="resultado" style="display:none;"></div>
+  <footer>
+    <p>Andrea Caracamo Angeles</p>
+  </footer>
 
-<footer>
-pagina hecha  jocelyn
-</footer>
-
-<script>
-  const campos = {
-    cuadrado: `
-      <label for="lado">Lado:</label>
-      <input type="number" id="lado" min="0" required>
-      <img src="cua.png" alt="Cuadrado">
-    `,
-    rectangulo: `
-      <label for="base">Base:</label>
-      <input type="number" id="base" min="0" required>
-      <label for="altura">Altura:</label>
-      <input type="number" id="altura" min="0" required>
-      <img src="retangulo.png" alt="Rectángulo">
-    `,
-    circulo: `
-      <label for="radio">Radio:</label>
-      <input type="number" id="radio" min="0" required>
-      <img src="cir.png" alt="Círculo">
-    `,
-    triangulo: `
-      <label for="lado">Lado:</label>
-      <input type="number" id="lado" min="0" required>
-      <img src="tri.png" alt="Triángulo">
-    `,
-    pentagono: `
-      <label for="lado">Lado:</label>
-      <input type="number" id="lado" min="0" required>
-      <img src="e.png" alt="Pentágono">
-    `,
-    hexagono: `
-      <label for="lado">Lado:</label>
-      <input type="number" id="lado" min="0" required>
-      <img src="l.png" alt="Hexágono">
-    `,
-    rombo: `
-      <label for="mayor">Diagonal Mayor:</label>
-      <input type="number" id="mayor" min="0" required>
-      <label for="menor">Diagonal Menor:</label>
-      <input type="number" id="menor" min="0" required>
-      <img src="a.png" alt="Rombo">
-    `,
-    trapecio: `
-      <label for="mayor">Base Mayor:</label>
-      <input type="number" id="mayor" min="0" required>
-      <label for="menor">Base Menor:</label>
-      <input type="number" id="menor" min="0" required>
-      <label for="altura">Altura:</label>
-      <input type="number" id="altura" min="0" required>
-      <img src="o.png" alt="Trapecio">
-    `
-  };
-
-  function mostrarCamposFigura() {
-    const figura = document.getElementById('figura').value;
-    const div = document.getElementById('campos');
-    div.innerHTML = campos[figura] || '';
-    document.getElementById('resultado').style.display = 'none';
-  }
-
-  document.getElementById('form-figuras').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const figura = document.getElementById('figura').value;
-    let area = 0, perimetro = 0;
-
-    const val = id => parseFloat(document.getElementById(id).value);
-
-    switch(figura) {
-      case 'cuadrado':
-        let lado = val('lado');
-        area = lado ** 2;
-        perimetro = 4 * lado;
-        break;
-      case 'rectangulo':
-        area = val('base') * val('altura');
-        perimetro = 2 * (val('base') + val('altura'));
-        break;
-      case 'circulo':
-        let r = val('radio');
-        area = Math.PI * r * r;
-        perimetro = 2 * Math.PI * r;
-        break;
-      case 'triangulo':
-        lado = val('lado');
-        area = (Math.sqrt(3) / 4) * lado * lado;
-        perimetro = 3 * lado;
-        break;
-      case 'pentagono':
-        lado = val('lado');
-        perimetro = 5 * lado;
-        area = (5 * lado * lado) / (4 * Math.tan(Math.PI / 5));
-        break;
-      case 'hexagono':
-        lado = val('lado');
-        perimetro = 6 * lado;
-        area = ((3 * Math.sqrt(3)) / 2) * lado * lado;
-        break;
-      case 'rombo':
-        let D = val('mayor'), d = val('menor');
-        area = (D * d) / 2;
-        perimetro = 4 * Math.sqrt((D/2)**2 + (d/2)**2);
-        break;
-      case 'trapecio':
-        let B = val('mayor'), b = val('menor'), h = val('altura');
-        area = ((B + b) / 2) * h;
-        let ladoInclinado = Math.sqrt(((B - b) / 2) ** 2 + h ** 2);
-        perimetro = B + b + 2 * ladoInclinado;
-        break;
-    }
-
-    const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `
-      <p>Área: ${area.toFixed(2)}</p>
-      <p>Perímetro: ${perimetro.toFixed(2)}</p>
-    `;
-    resultado.style.display = 'block';
-  });
-</script>
 </body>
 </html>

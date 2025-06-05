@@ -1,101 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Rombo: Área y Perímetro</title>
+  <meta charset="UTF-8">
+  <title>Rombo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff3e0; /* Fondo naranja claro */
-      color: #ef6c00;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
+      font-family: 'Quicksand', sans-serif;
+      color: #033047;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #ef6c00;
-    }
-    .box {
-      background-color: #ffe0b2;
-      padding: 15px;
-      margin-top: 10px;
-      border-left: 6px solid #ef6c00;
-      border-radius: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .boton-inicio {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .boton-inicio button {
-      background-color: #ef6c00;
+
+    header {
+      background: linear-gradient(to right, #0288d1, #26c6da);
       color: white;
-      padding: 12px 25px;
-      font-size: 16px;
-      font-weight: bold;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    }
-    .footer {
+      padding: 40px 20px;
       text-align: center;
-      margin-top: 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .contenedor {
+      max-width: 1100px;
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .contenedor h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      color: #0288d1;
+      margin-bottom: 60px;
+    }
+
+    .imagen {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+
+    .imagen img {
+      width: 150px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .descripcion-texto {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .descripcion-texto h3 {
+      font-weight: bold;
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .razon {
+      margin-top: 20px;
       font-style: italic;
-      color: #ef6c00;
+      color: #444;
+    }
+
+    .form-link {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      background-color: #0288d1;
+      color: white;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: max-content;
+    }
+
+    .form-link:hover {
+      background-color: #0277bd;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: linear-gradient(to right, #01579b, #0288d1);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 16px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
-<body id="top">
-  <div class="container">
-    <h1>¿Qué es un rombo?</h1>
-    <div class="box">
-      <p>
-        Un <strong>rombo</strong> es un cuadrilátero que tiene todos sus lados iguales, pero sus ángulos no son necesariamente rectos.
+<body>
+
+  <header>
+    <h1>Figura: Rombo</h1>
+  </header>
+
+  <div class="contenedor">
+    <div class="imagen">
+      <img src="rombo.png" alt="Rombo">
+    </div>
+
+    <div class="descripcion-texto">
+      <h3>Descripción</h3>
+      <p><strong>Nombre:</strong> Rombo</p>
+      <p><strong>Lados:</strong> 4 lados iguales</p>
+      <p><strong>Ángulos:</strong> 2 agudos y 
+        <br>2 obtusos</p>
+
+      <p><strong>Características:</strong><br>
+        - Todos sus lados son de igual longitud.<br>
+        - Sus ángulos opuestos son iguales.<br>
+        - Sus diagonales se cruzan en ángulo recto.<br>
+        - Es un paralelogramo.<br>
+        - Tiene 2 ejes de simetría.
       </p>
-      <ul>
-        <li>Tiene 4 lados iguales.</li>
-        <li>Sus ángulos opuestos son iguales.</li>
-        <li>Sus diagonales se cruzan formando ángulos rectos.</li>
-      </ul>
-    </div>
 
-    <h2>¿Cómo se calcula el área del rombo?</h2>
-    <div class="box">
-      <p>El área se calcula multiplicando las diagonales y dividiendo entre 2:</p>
-      <p><strong>Área = (Diagonal mayor × Diagonal menor) ÷ 2</strong></p>
-      <p>Ejemplo: Si la diagonal mayor mide 10 cm y la menor 6 cm:</p>
-      <p><strong>Área = (10 × 6) ÷ 2 = 30 cm²</strong></p>
-    </div>
+      <p><strong>Fórmulas:</strong><br>
+        <strong>Área:</strong> A = (D × d) / 2<br>
+        <strong>Perímetro:</strong> P = 4 × lado
+      </p>
 
-    <h2>¿Cómo se calcula el perímetro del rombo?</h2>
-    <div class="box">
-      <p>El perímetro se calcula sumando sus cuatro lados iguales:</p>
-      <p><strong>Perímetro = 4 × lado</strong></p>
-      <p>Ejemplo: Si el lado mide 5 cm:</p>
-      <p><strong>Perímetro = 4 × 5 = 20 cm</strong></p>
-    </div>
-
-    <!-- Botón de pantalla de inicio -->
-    <div class="boton-inicio">
-<a href="index.html">
-  <button>PANTALLA DE INICIO</button>
-</a>
-    </div>
-
-    <!-- Pie de página con autor -->
-    <div class="footer">
-      Página hecha por Jocelyn.
+      <p class="razon">El rombo es una figura interesante por su simetría y sus propiedades únicas, utilizadas tanto en geometría como en arte y diseño por su forma elegante.</p>
     </div>
   </div>
+
+  <a class="form-link" href="index.html">REGRESAR</a>
+
+  <footer>
+    <p>Andrea Carcamo Angeles</p>
+  </footer>
+
 </body>
 </html>
