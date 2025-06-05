@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras Geométricas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #f8bbd0;
+      padding: 8px;
+      background: #fce4ec;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #6a1b9a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Figuras Geométricas</h1>
+
+  <div class="grid">
+    <a href="cuadrado.html" class="card">
+      <img src="cua.png" alt="Cuadrado">
+      <p>Cuadrado</p>
+    </a>
+    <a href="rectangulo.html" class="card">
+      <img src="https://img.icons8.com/color/96/rectangle.png" alt="Rectángulo">
+      <p>Rectángulo</p>
+    </a>
+    <a href="circulo.html" class="card">
+      <img src="cir.png" alt="Círculo">
+      <p>Círculo</p>
+    </a>
+    <a href="triangulo.html" class="card">
+      <img src="tri.png" alt="Triángulo Equilátero">
+      <p>Triángulo Equilátero</p>
+    </a>
+    <a href="pentagono.html" class="card">
+      <img src="e.png" alt="Pentágono">
+      <p>Pentágono</p>
+    </a>
+    <a href="hexagono..html" class="card">
+      <img src="l.png" alt="Hexágono">
+      <p>Hexágono</p>
+    </a>
+    <a href="rombo.html" class="card">
+      <img src="a.png" alt="Rombo">
+      <p>Rombo</p>
+    </a>
+    <a href="trapecio.html" class="card">
+      <img src="s.png" alt="trapecio">
+      <p>Trapecio</p>
+    </a>
+     <a href="for.php" class="card">
+   
+      <p>FORMULARIO</p>
+    </a>
+  </div>
+
+</body>
+</html>
