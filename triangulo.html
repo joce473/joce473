@@ -2,142 +2,107 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Triángulo Equilátero</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <title>Triángulo Equilátero: Área y Perímetro</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
-      font-family: 'Quicksand', sans-serif;
-      color: #033047;
+      font-family: Arial, sans-serif;
+      background-color: #e0fbe0; /* Fondo claro verde */
+      color: #1b5e20;
+      padding: 20px;
     }
 
-    header {
-      background: linear-gradient(to right, #0288d1, #26c6da);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 48px;
-      font-family: 'Great Vibes', cursive;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-
-    .contenedor {
-      max-width: 1100px;
-      background: white;
-      margin: 40px auto;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      position: relative;
-    }
-
-    .imagen {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-    }
-
-    .imagen img {
-      width: 150px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .descripcion-texto {
-      font-size: 18px;
-      line-height: 1.6;
+    h1, h2 {
+      color: #2e7d32;
     }
 
-    .descripcion-texto h3 {
-      font-weight: bold;
-      font-size: 22px;
+    .box {
+      background-color: #c8e6c9;
+      padding: 15px;
       margin-top: 10px;
-    }
-
-    .razon {
-      margin-top: 20px;
-      font-style: italic;
-      color: #444;
-    }
-
-    .form-link {
-      display: block;
-      margin: 30px auto;
-      text-align: center;
-      background-color: #0288d1;
-      color: white;
-      padding: 12px 28px;
-      text-decoration: none;
+      border-left: 6px solid #2e7d32;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      width: max-content;
     }
 
-    .form-link:hover {
-      background-color: #0277bd;
-      transform: scale(1.05);
+    ul {
+      padding-left: 20px;
     }
 
-    footer {
-      background: linear-gradient(to right, #01579b, #0288d1);
-      color: white;
+    .boton-inicio {
       text-align: center;
-      padding: 20px 0;
-      font-size: 16px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
-    footer p {
-      margin: 5px 0;
+    .boton-inicio button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      color: #2e7d32;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Figura: Triángulo Equilátero</h1>
-  </header>
-
-  <div class="contenedor">
-    <div class="imagen">
-      <img src="triángulo.png" alt="Triángulo Equilátero">
+<body id="top">
+  <div class="container">
+    <h1>¿Qué es un triángulo equilátero?</h1>
+    <div class="box">
+      <p>
+        Un <strong>triángulo equilátero</strong> es una figura geométrica que tiene tres lados exactamente iguales y tres ángulos iguales, de 60° cada uno.
+      </p>
+      <ul>
+        <li>Tiene 3 lados iguales.</li>
+        <li>Tiene 3 ángulos de 60°.</li>
+        <li>Es un triángulo perfectamente simétrico.</li>
+      </ul>
     </div>
 
-    <div class="descripcion-texto">
-      <h3>Descripción</h3>
-      <p><strong>Nombre:</strong> Triángulo
-        <br>         Equilátero</p>
-      <p><strong>Lados:</strong> 3 lados iguales</p>
-      <p><strong>Ángulos:</strong> 3 ángulos de 60° 
-        <br> cada uno</p>
+    <h2>¿Cómo se calcula el área del triángulo equilátero?</h2>
+    <div class="box">
+      <p>El área se puede calcular con la fórmula:</p>
+      <p><strong>Área = (lado × altura) ÷ 2</strong></p>
+      <p>Ejemplo: Si el lado mide 6 cm y la altura 5.2 cm:</p>
+      <p><strong>Área = (6 × 5.2) ÷ 2 = 15.6 cm²</strong></p>
+    </div>
 
-      <p><strong>Características:</strong><br>
-      - Es un triángulo regular.<br>
-      - Tiene simetría axial.<br>
-      - Todos sus lados y ángulos son congruentes.<br>
-      - La altura divide el triángulo en dos triángulos rectángulos iguales.</p>
+    <h2>¿Cómo se calcula el perímetro del triángulo equilátero?</h2>
+    <div class="box">
+      <p>El perímetro es la suma de sus tres lados. Como todos son iguales:</p>
+      <p><strong>Perímetro = 3 × lado</strong></p>
+      <p>Ejemplo: Si el lado mide 6 cm:</p>
+      <p><strong>Perímetro = 3 × 6 = 18 cm</strong></p>
+    </div>
 
-      <p><strong>Fórmulas:</strong><br>
-      <strong>Área:</strong> A = (√3 / 4) × lado²<br>
-      <strong>Perímetro:</strong> P = 3 × lado</p>
+    <!-- Botón de pantalla de inicio -->
+    <div class="boton-inicio">
+<a href="index.html">
+  <button>PANTALLA DE INICIO</button>
+</a>
+    </div>
 
-      <p class="razon">El triángulo equilátero es una figura fundamental en geometría por su simplicidad, equilibrio y simetría perfecta, y aparece con frecuencia en estructuras, arte y naturaleza.</p>
+    <!-- Pie de página con autor -->
+    <div class="footer">
+      Página hecha por Jocelyn.
     </div>
   </div>
-
-  <a class="form-link" href="index.html">REGRESAR</a>
-
-  <footer>
-    <p>Andrea Carcamo Angeles</p>
-  </footer>
-
 </body>
 </html>

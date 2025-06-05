@@ -1,145 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Trapecio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Trapecio: Área y Perímetro</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
-      font-family: 'Quicksand', sans-serif;
-      color: #033047;
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9; /* Fondo verde claro */
+      color: #2e7d32;
+      padding: 20px;
     }
-
-    header {
-      background: linear-gradient(to right, #0288d1, #26c6da);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 48px;
-      font-family: 'Great Vibes', cursive;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-
-    .contenedor {
-      max-width: 1100px;
-      background: white;
-      margin: 40px auto;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      position: relative;
-    }
-
-    .imagen {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-    }
-
-    .imagen img {
-      width: 150px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .descripcion-texto {
-      font-size: 18px;
-      line-height: 1.6;
+    h1, h2 {
+      color: #388e3c;
     }
-
-    .descripcion-texto h3 {
-      font-weight: bold;
-      font-size: 22px;
+    .box {
+      background-color: #c8e6c9;
+      padding: 15px;
       margin-top: 10px;
-    }
-
-    .razon {
-      margin-top: 20px;
-      font-style: italic;
-      color: #444;
-    }
-
-    .form-link {
-      display: block;
-      margin: 30px auto;
-      text-align: center;
-      background-color: #0288d1;
-      color: white;
-      padding: 12px 28px;
-      text-decoration: none;
+      border-left: 6px solid #388e3c;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      width: max-content;
     }
-
-    .form-link:hover {
-      background-color: #0277bd;
-      transform: scale(1.05);
+    ul {
+      padding-left: 20px;
     }
-
-    footer {
-      background: linear-gradient(to right, #01579b, #0288d1);
-      color: white;
+    .boton-inicio {
       text-align: center;
-      padding: 20px 0;
-      font-size: 16px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
-
-    footer p {
-      margin: 5px 0;
+    .boton-inicio button {
+      background-color: #388e3c;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      color: #388e3c;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Figura: Trapecio</h1>
-  </header>
-
-  <div class="contenedor">
-    <div class="imagen">
-      <img src="trapecio.png" alt="Trapecio">
+<body id="top">
+  <div class="container">
+    <h1>¿Qué es un trapecio?</h1>
+    <div class="box">
+      <p>
+        Un <strong>trapecio</strong> es un cuadrilátero que tiene solamente dos lados opuestos paralelos. Estos lados paralelos se llaman <strong>bases</strong>.
+      </p>
+      <ul>
+        <li>Tiene 4 lados.</li>
+        <li>Solo dos lados son paralelos (la base mayor y la base menor).</li>
+        <li>Puede tener diferentes formas: rectángulo, isósceles o escaleno.</li>
+      </ul>
     </div>
 
-    <div class="descripcion-texto">
-      <h3>Descripción</h3>
-      <p><strong>Nombre:</strong> Trapecio</p>
-      <p><strong>Lados:</strong> 4 lados (2 paralelos 
-        <br>y 2 no)</p>
-      <p><strong>Ángulos:</strong> 4 ángulos no 
-        <br>necesariamente iguales</p>
+    <h2>¿Cómo se calcula el área del trapecio?</h2>
+    <div class="box">
+      <p>El área del trapecio se calcula con esta fórmula:</p>
+      <p><strong>Área = ((Base mayor + Base menor) × Altura) ÷ 2</strong></p>
+      <p>Ejemplo: Si la base mayor mide 10 cm, la menor 6 cm y la altura 4 cm:</p>
+      <p><strong>Área = ((10 + 6) × 4) ÷ 2 = (16 × 4) ÷ 2 = 64 ÷ 2 = 32 cm²</strong></p>
+    </div>
 
-      <p><strong>Características:</strong><br>
-      - Tiene solo un par de lados paralelos (bases).<br>
-      - Los otros dos lados se llaman no paralelos o laterales.<br>
-      - Puede clasificarse en trapecio isósceles, rectángulo o escaleno.<br>
-      - Sus ángulos adyacentes a una base son suplementarios.
-      </p>
+    <h2>¿Cómo se calcula el perímetro del trapecio?</h2>
+    <div class="box">
+      <p>El perímetro se calcula sumando los cuatro lados:</p>
+      <p><strong>Perímetro = lado1 + lado2 + lado3 + lado4</strong></p>
+      <p>Ejemplo: Si los lados miden 10 cm, 6 cm, 5 cm y 5 cm:</p>
+      <p><strong>Perímetro = 10 + 6 + 5 + 5 = 26 cm</strong></p>
+    </div>
 
-      <p><strong>Fórmulas:</strong><br>
-        <strong>Área:</strong> A = (base mayor + base menor) × altura ÷ 2<br>
-        <strong>Perímetro:</strong> P = suma de los cuatro lados
-      </p>
+    <!-- Botón de pantalla de inicio -->
+    <div class="boton-inicio">
+<a href="index.html">
+  <button>PANTALLA DE INICIO</button>
+</a>
+    </div>
 
-      <p class="razon">El trapecio es muy útil en arquitectura y diseño estructural, y permite estudiar figuras con un equilibrio entre simetría y variación.</p>
+    <!-- Pie de página con autor -->
+    <div class="footer">
+      Página hecha por Jocelyn.
     </div>
   </div>
-
-  <a class="form-link" href="index.html">REGRESAR</a>
-
-  <footer>
-    <p>Andrea Carcamo Angeles</p>
-  </footer>
-
 </body>
 </html>

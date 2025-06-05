@@ -2,152 +2,107 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rectángulo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <title>Rectángulo: Área y Perímetro</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
-      font-family: 'Quicksand', sans-serif;
-      color: #033047;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa; /* Fondo claro azulado */
+      color: #004d40;
+      padding: 20px;
     }
 
-    header {
-      background: linear-gradient(to right, #0288d1, #26c6da);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 48px;
-      font-family: 'Great Vibes', cursive;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-
-    .contenedor {
-      max-width: 1100px;
-      background: white;
-      margin: 40px auto;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      position: relative;
-    }
-
-    .contenedor h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      color: #0288d1;
-      margin-bottom: 60px;
-    }
-
-    .imagen {
-      position: absolute;
-      top: 20px; /* Imagen más arriba */
-      right: 40px;
-    }
-
-    .imagen img {
-      width: 150px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .descripcion-texto {
-      font-size: 18px;
-      line-height: 1.6;
+    h1, h2 {
+      color: #00796b;
     }
 
-    .descripcion-texto h3 {
-      font-weight: bold;
-      font-size: 22px;
+    .box {
+      background-color: #b2ebf2;
+      padding: 15px;
       margin-top: 10px;
-    }
-
-    .razon {
-      margin-top: 20px;
-      font-style: italic;
-      color: #444;
-    }
-
-    .form-link {
-      display: block;
-      margin: 30px auto;
-      text-align: center;
-      background-color: #0288d1;
-      color: white;
-      padding: 12px 28px;
-      text-decoration: none;
+      border-left: 6px solid #00796b;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      width: max-content;
     }
 
-    .form-link:hover {
-      background-color: #0277bd;
-      transform: scale(1.05);
+    ul {
+      padding-left: 20px;
     }
 
-    footer {
-      background: linear-gradient(to right, #01579b, #0288d1);
-      color: white;
+    .boton-inicio {
       text-align: center;
-      padding: 20px 0;
-      font-size: 16px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
-    footer p {
-      margin: 5px 0;
+    .boton-inicio button {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      color: #00695c;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Figura: Rectángulo</h1>
-  </header>
-
-  <div class="contenedor">
-   
-    <div class="imagen">
-      <img src="rectángulo.png" alt="Rectángulo">
+<body id="top">
+  <div class="container">
+    <h1>¿Qué es un rectángulo?</h1>
+    <div class="box">
+      <p>
+        Un <strong>rectángulo</strong> es una figura geométrica plana que también pertenece a los cuadriláteros. Se caracteriza por tener:
+      </p>
+      <ul>
+        <li>Cuatro lados: los lados opuestos son iguales.</li>
+        <li>Cuatro ángulos rectos (de 90° cada uno).</li>
+        <li>Lados paralelos por pares.</li>
+      </ul>
     </div>
 
-    <div class="descripcion-texto">
-      <h3>Descripción</h3>
-      <p><strong>Nombre:</strong> Rectángulo</p>
-      <p><strong>Lados:</strong> 4 lados (dos pares 
-        <br>de lados iguales)</p>
-      <p><strong>Ángulos:</strong> 4 ángulos rectos 
-        <br>de 90°</p>
+    <h2>¿Cómo se saca el área del rectángulo?</h2>
+    <div class="box">
+      <p>El área del rectángulo se calcula multiplicando la base por la altura:</p>
+      <p><strong>Área = base × altura</strong></p>
+      <p>Ejemplo: Si la base mide 8 cm y la altura 5 cm:</p>
+      <p><strong>Área = 8 × 5 = 40 cm²</strong></p>
+    </div>
 
-      <p><strong>Características:</strong><br>
-        - Lados opuestos son iguales y paralelos.<br>
-        - Tiene 2 ejes de simetría.<br>
-        - Es un tipo especial de paralelogramo.<br>
-        - Es una figura bidimensional muy usada en la vida cotidiana.
-      </p>
+    <h2>¿Cómo se saca el perímetro del rectángulo?</h2>
+    <div class="box">
+      <p>El perímetro del rectángulo se obtiene sumando todos sus lados o usando la fórmula:</p>
+      <p><strong>Perímetro = 2 × (base + altura)</strong></p>
+      <p>Ejemplo: Si la base es 8 cm y la altura es 5 cm:</p>
+      <p><strong>Perímetro = 2 × (8 + 5) = 2 × 13 = 26 cm</strong></p>
+    </div>
 
-      <p><strong>Fórmulas:</strong><br>
-        <strong>Área:</strong> A = base × altura<br>
-        <strong>Perímetro:</strong> P = 2 × (base + altura)
-      </p>
+    <!-- Botón de pantalla de inicio -->
+    <div class="boton-inicio">
+   <a href="index.html">
+  <button>PANTALLA DE INICIO</button>
+</a>
+    </div>
 
-      <p class="razon">El rectángulo es ampliamente utilizado en arquitectura, diseño gráfico, mobiliario, pantallas, libros y muchas más aplicaciones por su forma práctica y simétrica.</p>
+    <!-- Pie de página con autor -->
+    <div class="footer">
+      
     </div>
   </div>
-
-  <a class="form-link" href="index.html">REGRESAR</a>
-
-  <footer>
-    <p>Andrea Carcamo Angeles</p>
-  </footer>
-
 </body>
 </html>
